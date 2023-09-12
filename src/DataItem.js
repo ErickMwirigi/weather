@@ -4,7 +4,7 @@ function DataItem({ prop , city }){
 
 
 return(
-        <tr>
+        <tr className="tdatarows">
             <td>{city}</td>
             <td>{prop.valid_date}</td>
             <td>{prop.weather.description}</td>

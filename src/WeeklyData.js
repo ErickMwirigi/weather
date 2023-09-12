@@ -12,27 +12,29 @@ const chart = data.map(data => <DataItem key={data.valid_date} city={city_name} 
 return(
     <div>
         <div className="selectBtns">
-        <select id={"selectBtn"}>
+        <select className={"selectBtn"}>
             <option value={"Weekly"}>Weekly Data</option>
             <option value={"Daily"}>Daily Data</option>
         </select>
-        <select id={"selectBtn"}>
+        <select className={"selectBtn"}>
             <option value={"farmer"}>Farmer</option>
             <option value={"traveller"}>Traveller</option>
         </select>
         </div>
-        <table>
-            <tbody>
-                <tr>
-                    <th>City</th>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Temperature</th>
-                    <th>Precipitation</th>
-                </tr>
-                {chart}
-            </tbody>
-        </table>
+        <div className="tcontainer">
+            <table className="weekly">
+                <tbody>
+                    <tr className="theaders">
+                        <th>City</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Temperature</th>
+                        <th>Precipitation</th>
+                    </tr>
+                    {chart}
+                </tbody>
+            </table>
+        </div>
     </div>
 )
 }
