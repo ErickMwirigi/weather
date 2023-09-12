@@ -1,6 +1,6 @@
-import React, {useState , useEffect} from "react";
+import React from "react";
 
-function DailyData({ data }){
+function DailyData({ weatherInfo }){
     // const [dailyweather, setDailyWeather] = useState(data);
     
 
@@ -10,31 +10,36 @@ function DailyData({ data }){
          // .then((data) => setDailyWeather(data.data));
      // }, []);
     
-    //  function handleUser(){
-    //    return
-    //  }
+   const { data } = weatherInfo
+  //  console.log(data[3].datetime)
 
-    //  function handleFarmer(){
+     function handleUser(){
+       console.log("This is Traveller 0010")
+     }
 
-    //  }
-
-
-
-    //  console.log(Object.keys(WD[0]))
+     function handleFarmer(){
+      console.log("This is Farmer Joe")
+     }
     
-    //   const Anga = WD.filter(w => w.datetime === '2023-09-12').map((weather) => 
-    //   {return  <li key={Object.keys(WD[0])}>
-    //     <h1>MAX TEMPERATURE : {weather.app_max_temp} Celsius</h1>
-    //     <h1>MIN TEMPERATURE : {weather.app_min_temp} Celcius</h1>
-    //     <h1>PRECIPITATION : {weather.precip} mm</h1>
-    //     <h1>POP : {weather.pop} %</h1>
-    //   </li>})
-    
-    // console.log(Object.keys(WD[0]))
-    //   const Mkulima = WD.filter(F => F.datetime === '2023-09-12').map((shamba) =>
-    //   {return <li key={Object.keys(WD[0])}>
-    //        <h1>WEATHER DESC:  {shamba.weather.description}</h1>
-       /*  <div>
+      // const Anga = weatherInfo.data.filter(w => w.datetime === '2023-09-12').map((weather) => 
+      // {return  <li key={weather.datetime}>
+      //   <h1>MAX TEMPERATURE : {weather.app_max_temp} Celsius</h1>
+      //   <h1>MIN TEMPERATURE : {weather.app_min_temp} Celcius</h1>
+      //   <h1>PRECIPITATION : {weather.precip} mm</h1>
+      //   <h1>POP : {weather.pop} %</h1>
+      // </li>})
+ 
+      // const Mkulima = weatherInfo.data.filter(F => F.datetime === '2023-09-12').map((shamba) =>
+      // {return <li key={shamba.datetime}>
+      //      <h1>WEATHER DESCRIPTION:  {shamba.weather.description}</h1>
+          
+      // </li>}
+      // )
+      
+
+    return (
+        <div className="daily"> 
+          <div>
              <h1 className="Head">Weather Today</h1> 
              <nav className="category">
                <li onClick={handleUser}> 
@@ -44,15 +49,8 @@ function DailyData({ data }){
                 <a> FARMER</a>
                </li>
              </nav>
-             <ul>{Mkulima}</ul>  
-          </div> */ 
-    //   </li>}
-    //   )
-      
-
-    return (
-        <div className="daily"> 
-                 
+             
+          </div>        
         </div>
     )
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import DailyData from './DailyData';
+import Weekly from './WeeklyData';
 
 
 function Home() {
-
-    const [ weatherData, setWeatherData ] = useState([])
+    const [ weatherData, setWeatherData ] = useState("")
 
     const fetchData = ()=>{
 
@@ -17,9 +17,13 @@ function Home() {
         ()=> fetchData(),
         []
     )
-        console.log(weatherData)
+        // console.log(weatherData.data)
   return (
-    <DailyData data={weatherData}/>
+    <div>
+      <DailyData weatherInfo={weatherData}/>
+      <Weekly weatherInfo={weatherData}/>
+    </div>
+    
   );
 }
 

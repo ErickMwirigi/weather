@@ -1,7 +1,7 @@
 import React from "react";
 
-function Weekly({ propData }){
-
+function Weekly({ weatherInfo }){
+console.log(weatherInfo.data.filter(dat => dat.datetime === "2023-09-12"))
 return(
     <div>
         <table>
@@ -12,7 +12,6 @@ return(
                     <th>Temperature</th>
                     <th>Precipitation</th>
                 </tr>
-                {deteDef}
             </tbody>
         </table>
     </div>
