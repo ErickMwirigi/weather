@@ -12,7 +12,7 @@ function DailyData(){
      // }, []);
     
      function handleUser(){
-       
+       return
      }
 
      function handleFarmer(){
