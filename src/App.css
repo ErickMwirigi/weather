@@ -66,3 +66,19 @@ code {
   margin-left: 20px;
   width: 50%;
 }
+
+.selectBtns  {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#selectBtn {
+  margin: 20px;
+  padding: 0px 10px;
+  width: 120px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: #eeeeeed5;
+}

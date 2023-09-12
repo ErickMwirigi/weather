@@ -21,20 +21,20 @@ function DailyData({ weatherInfo }){
       console.log("This is Farmer Joe")
      }
     
-      // const Anga = weatherInfo.data.filter(w => w.datetime === '2023-09-12').map((weather) => 
-      // {return  <li key={weather.datetime}>
-      //   <h1>MAX TEMPERATURE : {weather.app_max_temp} Celsius</h1>
-      //   <h1>MIN TEMPERATURE : {weather.app_min_temp} Celcius</h1>
-      //   <h1>PRECIPITATION : {weather.precip} mm</h1>
-      //   <h1>POP : {weather.pop} %</h1>
-      // </li>})
+      const Anga = data.filter(w => w.datetime === '2023-09-12').map((weather) => 
+      {return  <li key={weather.datetime}>
+        <h1>MAX TEMPERATURE : {weather.app_max_temp} Celsius</h1>
+        <h1>MIN TEMPERATURE : {weather.app_min_temp} Celcius</h1>
+        <h1>PRECIPITATION : {weather.precip} mm</h1>
+        <h1>POP : {weather.pop} %</h1>
+      </li>})
  
-      // const Mkulima = weatherInfo.data.filter(F => F.datetime === '2023-09-12').map((shamba) =>
-      // {return <li key={shamba.datetime}>
-      //      <h1>WEATHER DESCRIPTION:  {shamba.weather.description}</h1>
+      const Mkulima = data.filter(F => F.datetime === '2023-09-12').map((shamba) =>
+      {return <li key={shamba.datetime}>
+           <h1>WEATHER DESCRIPTION:  {shamba.weather.description}</h1>
           
-      // </li>}
-      // )
+      </li>}
+      )
       
 
     return (
@@ -49,7 +49,7 @@ function DailyData({ weatherInfo }){
                 <a> FARMER</a>
                </li>
              </nav>
-             
+             {Mkulima}
           </div>        
         </div>
     )

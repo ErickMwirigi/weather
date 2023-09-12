@@ -2,9 +2,10 @@ import React from "react";
 
 function DataItem({ prop , city }){
 
-console.log(prop, city)
+
 return(
         <tr>
+            <td>{city}</td>
             <td>{prop.valid_date}</td>
             <td>{prop.weather.description}</td>
             <td>{prop.temp}</td>
