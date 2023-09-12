@@ -1,11 +1,9 @@
 import './App.css';
-import DailyData from './DailyData';
-
-
+import Home from './Home';
 
 function App() {
   return (
-    <DailyData/>
+    <Home />
   );
 }
 

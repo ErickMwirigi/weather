@@ -1,8 +1,7 @@
 import React, {useState , useEffect} from "react";
-import WD from "./data";
 
-function DailyData(){
-    const [dailyweather, setDailyWeather] = useState([]);
+function DailyData({ data }){
+    // const [dailyweather, setDailyWeather] = useState(data);
     
 
    // useEffect(() => {
@@ -11,38 +10,31 @@ function DailyData(){
          // .then((data) => setDailyWeather(data.data));
      // }, []);
     
-     function handleUser(){
-       return
-     }
+    //  function handleUser(){
+    //    return
+    //  }
 
-     function handleFarmer(){
+    //  function handleFarmer(){
 
-     }
+    //  }
 
 
 
-     console.log(Object.keys(WD[0]))
+    //  console.log(Object.keys(WD[0]))
     
-      const Anga = WD.filter(w => w.datetime === '2023-09-12').map((weather) => 
-      {return  <li key={Object.keys(WD[0])}>
-        <h1>MAX TEMPERATURE : {weather.app_max_temp} Celsius</h1>
-        <h1>MIN TEMPERATURE : {weather.app_min_temp} Celcius</h1>
-        <h1>PRECIPITATION : {weather.precip} mm</h1>
-        <h1>POP : {weather.pop} %</h1>
-      </li>})
+    //   const Anga = WD.filter(w => w.datetime === '2023-09-12').map((weather) => 
+    //   {return  <li key={Object.keys(WD[0])}>
+    //     <h1>MAX TEMPERATURE : {weather.app_max_temp} Celsius</h1>
+    //     <h1>MIN TEMPERATURE : {weather.app_min_temp} Celcius</h1>
+    //     <h1>PRECIPITATION : {weather.precip} mm</h1>
+    //     <h1>POP : {weather.pop} %</h1>
+    //   </li>})
     
-    console.log(Object.keys(WD[0]))
-      const Mkulima = WD.filter(F => F.datetime === '2023-09-12').map((shamba) =>
-      {return <li key={Object.keys(WD[0])}>
-           <h1>WEATHER DESC:  {shamba.weather.description}</h1>
-          
-      </li>}
-      )
-      
-
-    return (
-        <div className="daily"> 
-          <div>
+    // console.log(Object.keys(WD[0]))
+    //   const Mkulima = WD.filter(F => F.datetime === '2023-09-12').map((shamba) =>
+    //   {return <li key={Object.keys(WD[0])}>
+    //        <h1>WEATHER DESC:  {shamba.weather.description}</h1>
+       /*  <div>
              <h1 className="Head">Weather Today</h1> 
              <nav className="category">
                <li onClick={handleUser}> 
@@ -53,7 +45,14 @@ function DailyData(){
                </li>
              </nav>
              <ul>{Mkulima}</ul>  
-          </div>        
+          </div> */ 
+    //   </li>}
+    //   )
+      
+
+    return (
+        <div className="daily"> 
+                 
         </div>
     )
 }
