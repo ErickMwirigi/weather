@@ -1,11 +1,13 @@
 import React from "react";
+import { useState } from "react";
+import WeatherData from "./data";
 
 //function DailyData({ weatherInfo , toDisplay }){
     // const [dailyweather, setDailyWeather] = useState(data);
     
 
 function DailyData(){
-    const [dailyweather, setDailyWeather] = useState([]);
+    //const [dailyweather, setDailyWeather] = useState([]);
     const [data, setData] =useState(false)
 
 
@@ -16,7 +18,7 @@ function DailyData(){
       // }, []);
     
 
-      //const { data } = weatherInfo
+      const AA  = WeatherData.data
 
 
      function handleUser(){
@@ -27,11 +29,8 @@ function DailyData(){
        setData(Mkulima)
      }
 
-
-
-
-    
-      const Anga = data.filter(w => w.datetime === '2023-09-12').map((weather) => 
+    console.log(AA)
+      const Anga = AA.filter(w => w.datetime === '2023-09-12').map((weather) => 
       {return  <li key={weather.datetime}>
         <h1>MAX TEMPERATURE : {weather.app_max_temp} Celsius</h1>
         <h1>MIN TEMPERATURE : {weather.app_min_temp} Celcius</h1>
@@ -40,15 +39,13 @@ function DailyData(){
       </li>})
 
  
-     // const Mkulima = data.filter(F => F.datetime === '2023-09-12').map((shamba) =>
-     // {return <li key={shamba.datetime}>
-         //  <h1>WEATHER DESCRIPTION:  {shamba.weather.description}</h1>
+     //const Mkulima = data.filter(F => F.datetime === '2023-09-12').map((shamba) =>
+     //{return <li key={shamba.datetime}>
+          // <h1>WEATHER DESCRIPTION:  {shamba.weather.description}</h1>
           
-
     
-    
-      const Mkulima = WD.filter(F => F.datetime === '2023-09-12').map((shamba) =>
-      {return <li key={Object.keys(WD[0])}>
+      const Mkulima = AA.filter(F => F.datetime === '2023-09-12').map((shamba) =>
+      {return <li key={Object.keys(AA[0])}>
            <h1>WEATHER DESC:  {shamba.weather.description}</h1>
            <h1>WIND DIRECTION: {shamba.wind_cdir_full}</h1>
            <h1>WIND SPEED: {shamba.wind_gust_spd} KM/HR</h1>
@@ -57,13 +54,13 @@ function DailyData(){
       </li>}
       )
       
-      const display = toDisplay === "farmer" ? Mkulima : Anga
-
+      //const display = toDisplay === "farmer" ? Mkulima : Anga
+      
     return (
         <div className="daily"> 
           <div>
 
-             //{display}
+             
 
 
              <h1 className="Head">Weather Today</h1> 
