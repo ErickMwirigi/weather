@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import DailyData from './DailyData';
 import Weekly from './WeeklyData';
@@ -30,6 +31,9 @@ function Home() {
 
   return (
     <div>
+    <div>
+      <h2>Welcome to the Homepage!</h2>
+    </div>
       <div className="selectBtns">
       <select className={"selectBtn"} onClick={handleDisplay}>
           <option value={"weekly"} >Weekly Data</option>
