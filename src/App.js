@@ -1,31 +1,50 @@
-
-
-
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import Login from "./Login";
-import NavBar from "./NavBar";
-import './App.css';
-
-
-
-import Home from './Home';
+import React, { useState } from 'react';
+import './App.css'; 
+import Clock from './Clock'; 
+import SearchBar from './SearchBar';
+import Buttons from './Buttons';
+import ParagraphDisplay from './ParagraphDisplay';
+import WeatherButtons from './WeatherButtons';
 
 function App() {
+  const [weatherData, setWeatherData] = useState(null);
+
+  const handleWeatherSearch = (data) => {
+    setWeatherData(data);
+  };
+
+  const renderWeatherInfo = () => {
+    if (weatherData) {
+      return (
+        <ParagraphDisplay
+          text="text"
+          imageUrl="url"
+        />
+      );
+    }
+    return null;
+  };
+
   return (
-
-    
-
-    <div>
-      <NavBar />
-    <Home />
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/Daily" element={<DailyData />}/>
-        </Routes>
-
-
+    <div className="app">
+      <div className="header">
+        <h1>Weather App</h1>
+        <Clock />
+      </div>
+      <div className="main-container">
+        <div className="left-column">
+          <SearchBar onSearch={handleWeatherSearch} />
+          <Buttons />
+          {renderWeatherInfo()}
+        </div>
+        <div className="right-column">
+          <WeatherButtons
+            onDailyClick={() => console.log('Daily weather clicked')}
+            onWeeklyClick={() => console.log('Weekly weather clicked')}
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
