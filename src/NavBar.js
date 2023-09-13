@@ -34,9 +34,7 @@ function NavBar() {
       >
         Login
       </NavLink>
-      <NavLink to="/Daily">
-            DailyData
-        </NavLink>
+     
     </div>
   );
 }

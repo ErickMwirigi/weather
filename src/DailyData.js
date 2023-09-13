@@ -45,7 +45,7 @@ function DailyData(){
           
     
       const Mkulima = AA.filter(F => F.datetime === '2023-09-12').map((shamba) =>
-      {return <li key={Object.keys(AA[0])}>
+      {return <li key={Object.keys([0])}>
            <h1>WEATHER DESC:  {shamba.weather.description}</h1>
            <h1>WIND DIRECTION: {shamba.wind_cdir_full}</h1>
            <h1>WIND SPEED: {shamba.wind_gust_spd} KM/HR</h1>

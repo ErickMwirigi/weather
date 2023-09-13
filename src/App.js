@@ -1,31 +1,28 @@
-
-
-
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import './App.css';
-
-
-
-import Home from './Home';
+import DailyData from "./DailyData";
+import Clock from "./Clock";
+import Header from "./Header";
 
 function App() {
   return (
 
     
 
-    <div>
-      <NavBar />
-    <Home />
+    <>
+       <Home/>
+        
+        <Header/>
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/Daily" element={<DailyData />}/>
+          
         </Routes>
 
-
+     </>
   );
 }
 
