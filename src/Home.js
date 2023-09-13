@@ -20,11 +20,12 @@ function Home() {
     // )
         // console.log(WeatherData)
 
-        const dataDisplay = display === "daily" ? <DailyData weatherInfo={WeatherData}/> : <Weekly weatherInfo={WeatherData}/>
+        const dataDisplay = display === "weekly" ? <Weekly weatherInfo={WeatherData} /> : <DailyData weatherInfo={WeatherData} toDisplay={display}/>
 
         function handleDisplay(event){
          const value = event.target.value
          setDisplay(value)
+         
         }
 
   return (
@@ -39,7 +40,7 @@ function Home() {
           <option value={"traveller"}>Traveller</option>
       </select>
       </div>
-        {dataDisplay}
+      {dataDisplay}
     </div>
     
   );

@@ -1,6 +1,6 @@
 import React from "react";
 
-function DailyData({ weatherInfo }){
+function DailyData({ weatherInfo , toDisplay }){
     // const [dailyweather, setDailyWeather] = useState(data);
     
 
@@ -10,16 +10,8 @@ function DailyData({ weatherInfo }){
          // .then((data) => setDailyWeather(data.data));
      // }, []);
     
-   const { data } = weatherInfo
-  //  console.log(data[3].datetime)
+      const { data } = weatherInfo
 
-     function handleUser(){
-       console.log("This is Traveller 0010")
-     }
-
-     function handleFarmer(){
-      console.log("This is Farmer Joe")
-     }
     
       const Anga = data.filter(w => w.datetime === '2023-09-12').map((weather) => 
       {return  <li key={weather.datetime}>
@@ -36,11 +28,12 @@ function DailyData({ weatherInfo }){
       </li>}
       )
       
+      const display = toDisplay === "farmer" ? Mkulima : Anga
 
     return (
         <div className="daily"> 
           <div>
-             {Anga}
+             {display}
           </div>        
         </div>
     )

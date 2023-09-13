@@ -3,7 +3,7 @@ import DataItem from "./DataItem";
 
 function Weekly({ weatherInfo }){
 
-    const { city_name , country_code , data } = weatherInfo
+const { city_name , data } = weatherInfo
 
 // console.log(weatherInfo.data.filter(dat => dat.datetime === "2023-09-12"))
 
