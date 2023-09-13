@@ -1,21 +1,24 @@
-import logo from './logo.svg';
+
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import Login from "./Login";
+import NavBar from "./NavBar";
 import './App.css';
 import DailyData from './DailyData';
-import { Route, Switch } from "react-router-dom";
-import NavBar from './NavBar';
 
 
 
 function App() {
   return (
     <div>
-      <NavBar/>
-      <Switch>
-        <Route path="/Daily">
-          <DailyData />
-        </Route>
-      </Switch>
-      
+      <NavBar />
+    
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/Daily" element={<DailyData />}/>
+        </Routes>
+
     </div>
   );
 }
