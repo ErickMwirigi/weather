@@ -50,7 +50,7 @@ function DailyData(){
 
              <nav className="category">
                <li onClick={handleUser} className="user"> 
-                <h1>USER</h1>
+                <h1>ALL USERS</h1>
                </li>
                <li onClick={handleFarmer} className="farmer"> 
                 <h1>FARMER</h1>
