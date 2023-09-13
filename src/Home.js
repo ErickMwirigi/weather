@@ -6,7 +6,7 @@ import WeatherData from './data';
 
 function Home() {
     // const [ weatherData, setWeatherData ] = useState("")
-
+        const [ display , setDisplay ] = useState("")
     // const fetchData = ()=>{
 
     //     fetch("http://localhost:8002/weather-data")
@@ -18,11 +18,28 @@ function Home() {
     //     ()=> fetchData(),
     //     []
     // )
-        console.log(WeatherData)
+        // console.log(WeatherData)
+
+        const dataDisplay = display === "daily" ? <DailyData weatherInfo={WeatherData}/> : <Weekly weatherInfo={WeatherData}/>
+
+        function handleDisplay(event){
+         const value = event.target.value
+         setDisplay(value)
+        }
+
   return (
     <div>
-      <DailyData weatherInfo={WeatherData}/>
-      <Weekly weatherInfo={WeatherData}/>
+      <div className="selectBtns">
+      <select className={"selectBtn"} onClick={handleDisplay}>
+          <option value={"weekly"} >Weekly Data</option>
+          <option value={"daily"}>Daily Data</option>
+      </select>
+      <select className={"selectBtn"} onClick={handleDisplay}>
+          <option value={"farmer"}>Farmer</option>
+          <option value={"traveller"}>Traveller</option>
+      </select>
+      </div>
+        {dataDisplay}
     </div>
     
   );

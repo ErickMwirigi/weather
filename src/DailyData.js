@@ -40,16 +40,7 @@ function DailyData({ weatherInfo }){
     return (
         <div className="daily"> 
           <div>
-             <h1 className="Head">Weather Today</h1> 
-             <nav className="category">
-               <li onClick={handleUser}> 
-                <a> USER</a>
-               </li>
-               <li onClick={handleFarmer}> 
-                <a> FARMER</a>
-               </li>
-             </nav>
-             {Mkulima}
+             {Anga}
           </div>        
         </div>
     )

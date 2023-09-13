@@ -11,16 +11,6 @@ const chart = data.map(data => <DataItem key={data.valid_date} city={city_name} 
 
 return(
     <div>
-        <div className="selectBtns">
-        <select className={"selectBtn"}>
-            <option value={"Weekly"}>Weekly Data</option>
-            <option value={"Daily"}>Daily Data</option>
-        </select>
-        <select className={"selectBtn"}>
-            <option value={"farmer"}>Farmer</option>
-            <option value={"traveller"}>Traveller</option>
-        </select>
-        </div>
         <div className="tcontainer">
             <table className="weekly">
                 <tbody>
