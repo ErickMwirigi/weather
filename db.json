@@ -1,4 +1,5 @@
-const WeatherData = {
+{
+    "weather-data": {
     "city_name": "Nairobi",
     "country_code": "KE",
     "data": [
@@ -316,5 +317,4 @@ const WeatherData = {
     "state_code": "05",
     "timezone": "Africa/Nairobi"
 }
-
-  export default WeatherData
+  }
