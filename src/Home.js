@@ -3,11 +3,13 @@ import React, { useEffect, useState } from 'react';
 import DailyData from './DailyData';
 import Weekly from './WeeklyData';
 import WeatherData from './data';
+import Header from './Header';
 
 
 function Home() {
     // const [ weatherData, setWeatherData ] = useState("")
         const [ display , setDisplay ] = useState("")
+
     // const fetchData = ()=>{
 
     //     fetch("http://localhost:8002/weather-data")
@@ -21,31 +23,26 @@ function Home() {
     // )
         // console.log(WeatherData)
 
-        const dataDisplay = display === "weekly" ? <Weekly weatherInfo={WeatherData} /> : <DailyData weatherInfo={WeatherData} toDisplay={display}/>
+        const dataDisplay = display === "weekly" ? <Weekly weatherInfo={WeatherData} /> : <DailyData weatherInfo={WeatherData} />
 
         function handleDisplay(event){
          const value = event.target.value
-         setDisplay(value)
-         
+         setDisplay(value) 
         }
 
   return (
-    <div>
-    <div>
-      <h2>Welcome to the Homepage!</h2>
-    </div>
-      <div className="selectBtns">
-      <select className={"selectBtn"} onClick={handleDisplay}>
-          <option value={"weekly"} >Weekly Data</option>
-          <option value={"daily"}>Daily Data</option>
-      </select>
-      <select className={"selectBtn"} onClick={handleDisplay}>
-          <option value={"farmer"}>Farmer</option>
-          <option value={"traveller"}>Traveller</option>
-      </select>
+    <React.Fragment>
+      <Header />
+      <div className='homeHeader'>
+        <div className="selectbtn">
+          <button className="select" value="daily" onClick={handleDisplay}>Daily Data</button>
+          <button className="select" value="weekly" onClick={handleDisplay}>Weekly Data</button>
+        </div>
+              <div className='content'>
+        {dataDisplay}
       </div>
-      {dataDisplay}
-    </div>
+      </div>
+    </React.Fragment>
     
   );
 }

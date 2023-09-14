@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import "./Login.css"
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
+
+
+  let navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,12 +17,15 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    navigate("/home")
     console.log('Navigating to the homepage', formData);
   };
+  
   return (
-    <div className='container'>
-      <h2 className='header'>User Login</h2>
-      <form onSubmit={handleSubmit}>
+    <div className='login-container'>
+      <h2 className='loginheader'>User Login</h2>
+      <form onSubmit={handleSubmit} id='loginform'>
         <div className='inputs'>
           <label className='label'>Username:</label>
           <input
@@ -39,7 +45,7 @@ function Login() {
             onChange={handleChange}
           />
         </div>
-        <button className='submit-container' type="submit">Login</button>
+        <button className='submitbtn' type="submit">Login</button>
       </form>
     </div>
   );

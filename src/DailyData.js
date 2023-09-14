@@ -1,83 +1,64 @@
-import React from "react";
-import { useState } from "react";
-import WeatherData from "./data";
+import React , { useState } from "react";
+import Description from "./Description"
+import { ReactComponent as Rainny} from "./Assets/Rainny.svg"
+import { ReactComponent as CoolTemp} from "./Assets/CoolTemp.svg"
+import { ReactComponent as MaxTemp} from "./Assets/Temperature.svg"
+import { ReactComponent as Sunshine} from "./Assets/Sunshine.svg"
 
-//function DailyData({ weatherInfo , toDisplay }){
-    // const [dailyweather, setDailyWeather] = useState(data);
-    
+function DailyData({ weatherInfo }){
 
-function DailyData(){
     //const [dailyweather, setDailyWeather] = useState([]);
-    const [data, setData] =useState(false)
-
+    const [data, setData] =useState("")
 
      // useEffect(() => {
         //fetch("https://api.weatherbit.io/v2.0/forecast/daily?city=Nairobi&key=9875b20a90bd4a48883b67d76db3e073")
         //  .then((r) => r.json())
          // .then((data) => setDailyWeather(data.data));
       // }, []);
-    
-
-      const AA  = WeatherData.data
 
 
-     function handleUser(){
-       setData(Anga);
+    const dailyData  = weatherInfo.data
+
+    function handleUser(event){
+      const value = event.target.value
+      setData(value)
      }
 
-     function handleFarmer(){
-       setData(Mkulima)
-     }
-
-    console.log(AA)
-      const Anga = AA.filter(w => w.datetime === '2023-09-12').map((weather) => 
+      const Anga = dailyData.filter(w => w.datetime === '2023-09-12').map((weather) => 
       {return  <li key={weather.datetime}>
-        <h1>MAX TEMPERATURE : {weather.app_max_temp} Celsius</h1>
-        <h1>MIN TEMPERATURE : {weather.app_min_temp} Celcius</h1>
-        <h1>PRECIPITATION : {weather.precip} mm</h1>
-        <h1>POP : {weather.pop} %</h1>
-      </li>})
+                  <h3><Sunshine /><span> {weather.pop} %</span></h3>
+                  <h3><MaxTemp /><span> {weather.app_max_temp} Celsius</span></h3>
+                  <h3><CoolTemp /><span> {weather.app_min_temp} Celcius</span></h3>
+                  <h3><Rainny /><span>{weather.precip} mm</span></h3>
+                </li>})
 
- 
-     //const Mkulima = data.filter(F => F.datetime === '2023-09-12').map((shamba) =>
-     //{return <li key={shamba.datetime}>
-          // <h1>WEATHER DESCRIPTION:  {shamba.weather.description}</h1>
-          
     
-      const Mkulima = AA.filter(F => F.datetime === '2023-09-12').map((shamba) =>
+      const Mkulima = dailyData.filter(F => F.datetime === '2023-09-12').map((shamba) =>
       {return <li key={Object.keys([0])}>
-           <h1>WEATHER DESC:  {shamba.weather.description}</h1>
-           <h1>WIND DIRECTION: {shamba.wind_cdir_full}</h1>
-           <h1>WIND SPEED: {shamba.wind_gust_spd} KM/HR</h1>
-           <h1>SNOW: {shamba.snow}</h1>
-
-      </li>}
+                <h2>Weather Description: <span> {shamba.weather.description}</span></h2>
+                <h2>Wind Direction:  <span> {shamba.wind_cdir_full}</span></h2>
+                <h2>Wind Speed:  <span> {shamba.wind_gust_spd} KM/HR </span></h2>
+                <h2>Snow:  <span> {shamba.snow} </span></h2>
+              </li>}
       )
-      
-      //const display = toDisplay === "farmer" ? Mkulima : Anga
-      
+      const dataDisplay = data === "anga" ? Anga
+    : Mkulima
+
     return (
-        <div className="daily"> 
-          <div>
-
+          <div className="daily">
+            <h1>Weather Today</h1> 
+            <select className={"selectBtn"} onClick={handleUser}>
+              <option value={"anga"}>All Users</option>
+              <option value={"mkulima"}>Mkulima</option>
+            </select>
+            <div>
+              <div className="daily-data">
+                {dataDisplay}
+              </div> 
+                <Description display={data}/> 
+            </div>
              
-
-
-             <h1 className="Head">Weather Today</h1> 
-
-             <nav className="category">
-               <li onClick={handleUser} className="user"> 
-                <h1>ALL USERS</h1>
-               </li>
-               <li onClick={handleFarmer} className="farmer"> 
-                <h1>FARMER</h1>
-               </li>
-             </nav>
-
-             <ul>{data}</ul>  
-
           </div>        
-        </div>
     )
 }
 
