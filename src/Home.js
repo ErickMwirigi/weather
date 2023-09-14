@@ -34,11 +34,9 @@ function Home() {
     <React.Fragment>
       <Header />
       <div className='homeHeader'>
-        <div className="selectBtns">
-        <select className={"selectBtn"} onClick={handleDisplay}>
-            <option value={"weekly"}>Weekly Data</option>
-            <option value={"daily"}>Daily Data</option>
-        </select>
+        <div className="selectbtn">
+          <button className="select" value="daily" onClick={handleDisplay}>Daily Data</button>
+          <button className="select" value="weekly" onClick={handleDisplay}>Weekly Data</button>
         </div>
               <div className='content'>
         {dataDisplay}

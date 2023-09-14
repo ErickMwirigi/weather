@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
-import WeatherButtons from './WeatherButtons';
 
 function Header(){
 
@@ -21,7 +20,9 @@ function Header(){
         <div className="clock">
           {time.toLocaleTimeString()}
         </div>
-        <WeatherButtons />
+        <div className="weather-buttons">
+          <input type="date" placeholder="Select a date and time" />
+        </div>
     </header>
   );
 };

@@ -32,11 +32,6 @@ function DailyData({ weatherInfo }){
                   <h3><Rainny /><span>{weather.precip} mm</span></h3>
                 </li>})
 
- 
-     //const Mkulima = data.filter(F => F.datetime === '2023-09-12').map((shamba) =>
-     //{return <li key={shamba.datetime}>
-          // <h1>WEATHER DESCRIPTION:  {shamba.weather.description}</h1>
-          
     
       const Mkulima = dailyData.filter(F => F.datetime === '2023-09-12').map((shamba) =>
       {return <li key={Object.keys([0])}>
