@@ -48,7 +48,8 @@ function DailyData({ weatherInfo }){
           <div className="daily">
             <h1>Weather Today</h1> 
             <select className={"selectBtn"} onClick={handleUser}>
-              <option value={"anga"}>All Users</option>
+              <option value="All">All</option>
+              <option value={"anga"}>Users</option>
               <option value={"mkulima"}>Mkulima</option>
             </select>
             <div>
