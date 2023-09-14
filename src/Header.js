@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
-import Clock from './Clock';
+import WeatherButtons from './WeatherButtons';
 
-const Header = () => {
+function Header(){
+
+    const [time, setTime] = useState(new Date());
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setTime(new Date());
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }, [])
+
   return (
     <header className="header">
         <NavBar />        
         <h1>Weather App</h1>
-        <Clock/>
-      {/* content for the header*/}
+        <div className="clock">
+          {time.toLocaleTimeString()}
+        </div>
+        <WeatherButtons />
     </header>
   );
 };
