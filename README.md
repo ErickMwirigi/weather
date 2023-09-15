@@ -89,6 +89,9 @@ The Button component handles user login and signup actions. It manages the user'
 ## DailyData Component
 The DailyData component displays the weather data for a selected date. It allows users to switch between two views, 'anga' and 'mkulima,' which show different weather details.
 
+## Data Component
+The Data component is a reusable table row for displaying weather data. It receives data as props and renders it in a table row.
+
 
 
 
