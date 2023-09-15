@@ -1,27 +1,12 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import DailyData from './DailyData';
 import Weekly from './WeeklyData';
-import WeatherData from './data';
 import Header from './Header';
 
 
-function Home() {
-    // const [ weatherData, setWeatherData ] = useState("")
-        const [ display , setDisplay ] = useState("")
-
-    // const fetchData = ()=>{
-
-    //     fetch("http://localhost:8002/weather-data")
-    //     .then(resp => resp.json())
-    //     .then(data => setWeatherData(data))
-    // }
-
-    // useEffect(
-    //     ()=> fetchData(),
-    //     []
-    // )
-        // console.log(WeatherData)
+function Home({ WeatherData , runFetch }) {
+    const [ display , setDisplay ] = useState("")
 
         const dataDisplay = display === "weekly" ? <Weekly weatherInfo={WeatherData} /> : <DailyData weatherInfo={WeatherData} />
 
@@ -32,13 +17,13 @@ function Home() {
 
   return (
     <React.Fragment>
-      <Header />
+      <Header fetchData={runFetch}/>
       <div className='homeHeader'>
         <div className="selectbtn">
           <button className="select" value="daily" onClick={handleDisplay}>Daily Data</button>
           <button className="select" value="weekly" onClick={handleDisplay}>Weekly Data</button>
         </div>
-              <div className='content'>
+      <div className='content'>
         {dataDisplay}
       </div>
       </div>

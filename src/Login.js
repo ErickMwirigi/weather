@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login({ userData }) {
+  const [ isLoggedIn, setIsLoggedIn ] = useState(false)
   const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
-
 
   let navigate = useNavigate()
 
@@ -18,8 +18,11 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    navigate("/home")
-    console.log('Navigating to the homepage', formData);
+    const user = userData.find(pass => pass.firstname === formData.username) ? userData.find(pass => pass.firstname === formData.username) : alert("Can't find User")
+
+    user.password === formData.password ? setIsLoggedIn(true) : setIsLoggedIn(false)
+
+    isLoggedIn ? navigate("/home", { replace: true }) :  alert("Please input the correct username or password or sign-up with us today.")
   };
   
   return (
