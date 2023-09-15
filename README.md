@@ -86,7 +86,8 @@ The App component is the entry point of the application. It sets up routing usin
 ## Button Component
 The Button component handles user login and signup actions. It manages the user's login state and displays a welcome message when logged in.
 
-
+## DailyData Component
+The DailyData component displays the weather data for a selected date. It allows users to switch between two views, 'anga' and 'mkulima,' which show different weather details.
 
 
 
