@@ -22,8 +22,8 @@ h1, h2{
     font-weight: 500;
 }
 
-.Navlink:hover{
-    background-color: rgba(28, 169, 212, 0.938);
+.Navlink:hover {
+    background-image: linear-gradient(#34a1eb, #2481bef1, #39a2e9);
 }
 
 .homeHeader{
@@ -37,6 +37,7 @@ h1, h2{
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  height: 100%;
   text-align: center;
   color: rgba(112, 112, 110, 0.966);
   padding: 15px;
@@ -84,25 +85,28 @@ flex-wrap: wrap;
 } */
 
 .selectbtn{
-  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 3px;
   display: flex;
   flex-direction: row;
-  width: 100px;
+  width: 100%;
 }
 
 .select{
-  margin: auto;
   border: none;
   font-size:small;
   font-weight: 600;
   border-right: 1px solid #fdfdfd;
   text-align: center;
-  background-color: #3498dbbb;
+  background-image: linear-gradient(#2da9fcce, #2ea0ecef, #2da9fcce);
+  /* background-color: #3498dbbb; */
   color: #fdfdfd;
   padding: 10px 35px;
-  max-width: 100%;
   height: 40px;
+}
+
+.select:hover {
+  background-image: linear-gradient(#19a3ffda, #2ea0ecef, #19a3ffda);
 }
 
 .selectBtn {

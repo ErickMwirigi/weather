@@ -18,11 +18,11 @@ function Login({ userData }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const user = userData.find(pass => pass.firstname === formData.username) ? userData.find(pass => pass.firstname === formData.username) : "Can't find"
+    const user = userData.find(pass => pass.firstname === formData.username) ? userData.find(pass => pass.firstname === formData.username) : alert("Can't find User")
 
     user.password === formData.password ? setIsLoggedIn(true) : setIsLoggedIn(false)
 
-    isLoggedIn ? navigate("/home") :  alert("Please input the correct password or sign-up with us today.")
+    isLoggedIn ? navigate("/home", { replace: true }) :  alert("Please input the correct username or password or sign-up with us today.")
   };
   
   return (
