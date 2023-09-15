@@ -78,7 +78,10 @@ The Weather App provides two main features:
 2. Weather Information: After logging in, users can view the daily and weekly weather forecast for a selected city.
 
 
+# Components
 
+## App Component
+The App component is the entry point of the application. It sets up routing using React Router and renders the Login and Home components based on the user's authentication status.
 
 
 
