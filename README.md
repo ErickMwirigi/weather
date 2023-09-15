@@ -71,6 +71,11 @@ npm start
 This will launch the app locally, and you can access it in your web browser at http://localhost:3000.
 
 
+# Usage
+The Weather App provides two main features:
+
+1. Login Page: Users can log in with their credentials.
+2. Weather Information: After logging in, users can view the daily and weekly weather forecast for a selected city.
 
 
 
