@@ -1,30 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState , useEffect } from 'react';
+import { ReactComponent as Search } from "./Assets/🦆 icon _search_.svg";
 
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
+const SearchBar = ({ runFetch }) => {
+  const [city, setCity] = useState('');
+  const [time, setTime] = useState(new Date());
+  const [ date, setDate] = useState("")
 
-  // useEffect(() => {
-  //   const fetchResults = async () => {
-  //     try {
-  //       const response = await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?city=${query}&key=9875b20a90bd4a48883b67d76db3e073`);
-  //       const data = await response.json();
-  //       onSearch(data);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
 
-  //   fetchResults();
-  // }, []);
-  //query, onSearch
+    return () => clearInterval(interval);
+  }, [])
+
+  function handleChange(e){
+    setDate(e.target.value)
+    
+  }
+
+  function searchCity(){
+    runFetch(city)
+  }
 
   const handleInputChange = (e) => {
-    setQuery(e.target.value);
+    setCity(e.target.value);
+    console.log(city)
   };
 
   return (
     <div className="search-bar">
-      <input type="text" placeholder="Search city..." value={query} onChange={handleInputChange} />
+      <div className="clock">
+        {time.toLocaleTimeString()}
+      </div>
+      <div className="weather-buttons">
+        <input type="date" placeholder="Select a date and time" value={date} onChange={handleChange}/>
+        <div className="search-btn">
+          <input type="text" id='searchBar' placeholder="Search city..." value={city} onChange={handleInputChange} />
+          <button id="searchIcon" onClick={searchCity}><Search /></button>
+        </div>
+        
+      </div>
     </div>
   );
 };

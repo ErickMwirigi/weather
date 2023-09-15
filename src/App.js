@@ -9,11 +9,11 @@ function App() {
       const [ logIn , setLogIns ] = useState("")
       const [ weatherData, setWeatherData ] = useState("")
   
-      const fetchURL = "https://api.weatherbit.io/v2.0/forecast/daily?city=Kisumu&key=4f92b0047455432c85eeb812927033b3"
+      // const fetchURL = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city="Kisumu"}&key=4f92b0047455432c85eeb812927033b3`
   
-      const fetchData = ()=>{
+      const fetchData = (city="Kisumu")=>{
   
-          fetch(fetchURL)
+          fetch(`https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=4f92b0047455432c85eeb812927033b3`)
           .then(resp => resp.json())
           .then(data => setWeatherData(data))
       }
@@ -40,13 +40,13 @@ function App() {
           },
           []
       )
-
+          console.log(fetchData)
   return (
     <React.Fragment>
         <Routes>
-          <Route path="/" element={<Login userData={logIn} WeatherData={weatherData}/>} />
+          <Route path="/" element={<Login userData={logIn} WeatherData={weatherData} />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/home/*" element={<Home WeatherData={weatherData} />} />
+          <Route path="/home/*" element={<Home WeatherData={weatherData} runFetch={fetchData}/>} />
         </Routes>
      </React.Fragment>
   );

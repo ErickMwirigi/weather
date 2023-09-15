@@ -5,7 +5,7 @@ import Weekly from './WeeklyData';
 import Header from './Header';
 
 
-function Home({ WeatherData }) {
+function Home({ WeatherData , runFetch }) {
     const [ display , setDisplay ] = useState("")
 
         const dataDisplay = display === "weekly" ? <Weekly weatherInfo={WeatherData} /> : <DailyData weatherInfo={WeatherData} />
@@ -17,7 +17,7 @@ function Home({ WeatherData }) {
 
   return (
     <React.Fragment>
-      <Header />
+      <Header fetchData={runFetch}/>
       <div className='homeHeader'>
         <div className="selectbtn">
           <button className="select" value="daily" onClick={handleDisplay}>Daily Data</button>

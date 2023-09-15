@@ -157,6 +157,15 @@ flex-wrap: wrap;
   font-weight: 600;
 }
 
+.weather-buttons{
+  display: flex;
+  margin: 30px 30px 30px 0;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content:flex-start;
+}
+
 .weather-buttons input {
   width: auto;
   padding: 10px;
@@ -165,6 +174,27 @@ flex-wrap: wrap;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 10px;
+}
+.search-btn {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-content:center;
+  justify-content:last baseline;
+}
+
+#searchIcon{
+  margin: 10px 0 0 10px;
+  padding: 5px;
+  border: none;
+  background-color: #3498db00;
+  flex-shrink: 0;
+}
+
+#searchIcon:hover {
+  cursor: pointer;
+  border-radius: 3px;
+  background-image: linear-gradient(#19a3ffda, #2ea0ecef, #19a3ffda);
 }
 
 .login-container {
@@ -202,11 +232,12 @@ flex-wrap: wrap;
 
 .signup-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: auto;
-  width: 70%;
+  width: 80%;
   height: 100%;
   padding: 40px;
   background: rgba(56, 56, 56, 0.774);
@@ -234,8 +265,7 @@ flex-wrap: wrap;
 }
 
 .inputs > input{
-  display: inline;
-  flex-shrink: 0;
+  display: inherit;
   padding: 4px;
   margin: 20px;
 }
