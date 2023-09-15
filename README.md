@@ -83,6 +83,8 @@ The Weather App provides two main features:
 ## App Component
 The App component is the entry point of the application. It sets up routing using React Router and renders the Login and Home components based on the user's authentication status.
 
+## Button Component
+The Button component handles user login and signup actions. It manages the user's login state and displays a welcome message when logged in.
 
 
 
