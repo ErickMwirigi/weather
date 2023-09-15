@@ -9,8 +9,6 @@ function App() {
       const [ logIn , setLogIns ] = useState("")
       const [ weatherData, setWeatherData ] = useState("")
   
-      // const fetchURL = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city="Kisumu"}&key=4f92b0047455432c85eeb812927033b3`
-  
       const fetchData = (city="Kisumu")=>{
   
           fetch(`https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=4f92b0047455432c85eeb812927033b3`)

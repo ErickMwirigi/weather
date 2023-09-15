@@ -237,6 +237,7 @@ flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: auto;
+  margin-top: 40px;
   width: 80%;
   height: 100%;
   padding: 40px;
