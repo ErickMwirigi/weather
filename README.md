@@ -101,5 +101,36 @@ The Header component contains the application's header, including navigation lin
 ## Home Component
 The Home component is the main content of the application. It renders the Header component and allows users to switch between 'daily' and 'weekly' weather views using buttons.
 
+## Login Component
+The Login component handles user authentication. It provides a login form where users can enter their username and password to access weather information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
