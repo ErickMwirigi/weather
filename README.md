@@ -114,7 +114,10 @@ The SearchBar component is responsible for searching weather data for a specific
 The Weekly component displays a table of weather data for the entire week. It receives data as props and renders it in a table format.
 
 
+``````
+With these components working together, the Weather App provides an intuitive and informative weather forecasting experience. Explore and enjoy!
 
+``````
 
 
 
