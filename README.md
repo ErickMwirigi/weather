@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Weather App is a simple and elegant React application that allows users to check the daily and weekly weather forecast for a specific city. It utilizes various components to provide a seamless user experience.
 
-## Available Scripts
+## Table of Contents
+Getting Started
+Prerequisites
+Installation
+Usage
+Components
+App Component
+Button Component
+DailyData Component
+Data Component
+Description Component
+Header Component
+Home Component
+Login Component
+NavBar Component
+SearchBar Component
+Weekly Component
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Certainly! Here's a detailed README file for your React weather app, explaining how to set it up and how all the components work together.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Weather App
+This Weather App is a simple and elegant React application that allows users to check the daily and weekly weather forecast for a specific city. It utilizes various components to provide a seamless user experience.
 
-### `npm test`
+Table of Contents
+Getting Started
+Prerequisites
+Installation
+Usage
+Components
+App Component
+Button Component
+DailyData Component
+Data Component
+Description Component
+Header Component
+Home Component
+Login Component
+NavBar Component
+SearchBar Component
+Weekly Component
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Getting Started
 
-### `npm run build`
+Installation
+Follow these steps to get the app up and running:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone this repository to your local machine:
+git clone <repository-url>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Change into the project directory:
+cd weather-app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install the required dependencies:
+npm install
 
-### `npm run eject`
+Install React Router DOM:
+npm install react-router-dom
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the JSON server for mock data (if needed):
+npm run server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the React development server:
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This will launch the app locally, and you can access it in your web browser at http://localhost:3000.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# Usage
+The Weather App provides two main features:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Login Page: Users can log in with their credentials.
+2. Weather Information: After logging in, users can view the daily and weekly weather forecast for a selected city.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## App Component
+The App component is the entry point of the application. It sets up routing using React Router and renders the Login and Home components based on the user's authentication status.
 
-### Analyzing the Bundle Size
+## Button Component
+The Button component handles user login and signup actions. It manages the user's login state and displays a welcome message when logged in.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## DailyData Component
+The DailyData component displays the weather data for a selected date. It allows users to switch between two views, 'anga' and 'mkulima,' which show different weather details.
 
-### Making a Progressive Web App
+## Data Component
+The Data component is a reusable table row for displaying weather data. It receives data as props and renders it in a table row.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Description Component
+The Description component provides a weather analysis description based on the selected view ('anga' or 'mkulima'). It displays different information depending on the user's choice.
 
-### Advanced Configuration
+## Header Component
+The Header component contains the application's header, including navigation links, the current time, and a date picker for selecting a specific date and time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Home Component
+The Home component is the main content of the application. It renders the Header component and allows users to switch between 'daily' and 'weekly' weather views using buttons.
 
-### Deployment
+## Login Component
+The Login component handles user authentication. It provides a login form where users can enter their username and password to access weather information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## NavBar Component
+The NavBar component displays navigation links for the application. It includes links to the home page and the login page.
 
-### `npm run build` fails to minify
+## SearchBar Component
+The SearchBar component is responsible for searching weather data for a specific city. It allows users to input a city name and fetches data from an API (currently mocked).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Weekly Component
+The Weekly component displays a table of weather data for the entire week. It receives data as props and renders it in a table format.
+
+
+``````
+With these components working together, the Weather App provides an intuitive and informative weather forecasting experience. Explore and enjoy!
+
+``````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
