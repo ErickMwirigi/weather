@@ -95,5 +95,8 @@ The Data component is a reusable table row for displaying weather data. It recei
 ## Description Component
 The Description component provides a weather analysis description based on the selected view ('anga' or 'mkulima'). It displays different information depending on the user's choice.
 
+## Header Component
+The Header component contains the application's header, including navigation links, the current time, and a date picker for selecting a specific date and time.
+
 
 
