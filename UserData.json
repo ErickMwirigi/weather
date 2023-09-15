@@ -8,6 +8,15 @@
       "email": "michaelfebzen.mb@gmail.com",
       "password": "mwagash",
       "id": 1
+    },
+    {
+      "firstname": "ERICK",
+      "surname": "MBAE",
+      "occupation": "DA",
+      "contact": "0711326099",
+      "email": "erickmbae21@gmail.com",
+      "password": "erick",
+      "id": 2
     }
   ]
 }

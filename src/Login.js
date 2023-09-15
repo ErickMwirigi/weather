@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Login({ userData }) {
   const [ isLoggedIn, setIsLoggedIn ] = useState(false)
@@ -48,6 +49,9 @@ function Login({ userData }) {
             onChange={handleChange}
           />
         </div>
+        <NavLink className="Navlink" to="/signup">
+          Sign-Up
+        </NavLink>
         <button className='submitbtn' type="submit">Login</button>
       </form>
     </div>
