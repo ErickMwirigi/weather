@@ -104,7 +104,8 @@ The Home component is the main content of the application. It renders the Header
 ## Login Component
 The Login component handles user authentication. It provides a login form where users can enter their username and password to access weather information.
 
-
+## NavBar Component
+The NavBar component displays navigation links for the application. It includes links to the home page and the login page.
 
 
 
