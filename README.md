@@ -107,6 +107,9 @@ The Login component handles user authentication. It provides a login form where 
 ## NavBar Component
 The NavBar component displays navigation links for the application. It includes links to the home page and the login page.
 
+## SearchBar Component
+The SearchBar component is responsible for searching weather data for a specific city. It allows users to input a city name and fetches data from an API (currently mocked).
+
 
 
 
