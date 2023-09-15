@@ -98,5 +98,8 @@ The Description component provides a weather analysis description based on the s
 ## Header Component
 The Header component contains the application's header, including navigation links, the current time, and a date picker for selecting a specific date and time.
 
+## Home Component
+The Home component is the main content of the application. It renders the Header component and allows users to switch between 'daily' and 'weekly' weather views using buttons.
+
 
 
