@@ -92,7 +92,8 @@ The DailyData component displays the weather data for a selected date. It allows
 ## Data Component
 The Data component is a reusable table row for displaying weather data. It receives data as props and renders it in a table row.
 
-
+## Description Component
+The Description component provides a weather analysis description based on the selected view ('anga' or 'mkulima'). It displays different information depending on the user's choice.
 
 
 
