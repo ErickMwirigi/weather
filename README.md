@@ -110,7 +110,8 @@ The NavBar component displays navigation links for the application. It includes 
 ## SearchBar Component
 The SearchBar component is responsible for searching weather data for a specific city. It allows users to input a city name and fetches data from an API (currently mocked).
 
-
+## Weekly Component
+The Weekly component displays a table of weather data for the entire week. It receives data as props and renders it in a table format.
 
 
 
